@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_s.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_unsigned.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 12:10:04 by plavergn          #+#    #+#             */
-/*   Updated: 2021/11/18 12:17:52 by plavergn         ###   ########.fr       */
+/*   Created: 2021/11/19 14:28:30 by plavergn          #+#    #+#             */
+/*   Updated: 2021/11/19 14:30:44 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-int	ft_print_s(va_list args)
+int	ft_putnbr_unsigned(unsigned int nb)
 {
 	int	size;
 
-	size = ft_putstr((char *)va_arg (args, char *));
+	size = 0;
+	if (nb >= 0 && nb <= 9)
+		size += ft_putchar((unsigned char)(nb + '0'));
+	if (nb >= 10)
+	{
+		size += ft_putnbr_unsigned(nb / 10);
+		size += ft_putnbr_unsigned(nb % 10);
+	}
 	return (size);
 }

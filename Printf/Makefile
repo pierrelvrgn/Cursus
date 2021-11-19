@@ -5,26 +5,25 @@
 #                                                     +:+ +:+         +:+      #
 #    By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/16 11:13:11 by plavergn          #+#    #+#              #
-#    Updated: 2021/11/18 12:12:08 by plavergn         ###   ########.fr        #
+#    Created: 2021/11/19 11:22:35 by plavergn          #+#    #+#              #
+#    Updated: 2021/11/19 15:28:14 by plavergn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+
 NAME = libftprintf.a
 
-SRCS =  ./ft_printf.c \
-		./printer/ft_print_c.c\
-		./printer/ft_print_i.c\
-		./printer/ft_print_percent.c\
-		./printer/ft_print_u.c\
-		./utils/ft_putnbr.c\
-		./utils/ft_putstr.c\
-		./printer/ft_print_d.c\
-		./printer/ft_print_p.c\
-		./printer/ft_print_s.c\
-		./printer/ft_print_x.c\
-		./utils/ft_putchar.c\
-		./utils/ft_putnbr_base.c
+SRCS =	ft_printf.c\
+		printer/ft_printer.c\
+		utils/ft_putchar.c\
+		utils/ft_putnbr.c\
+		utils/ft_putnbr_base.c\
+		utils/ft_putstr.c\
+		utils/ft_putnbr_unsigned.c\
+		utils/ft_print_small_hexa.c\
+		utils/ft_print_big_hexa.c\
+		utils/ft_print_void_hexa.c\
+		utils/ft_putnbr_base_void.c\
 
 OBJS = ${SRCS:.c=.o}
 

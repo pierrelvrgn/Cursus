@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 14:37:04 by plavergn          #+#    #+#             */
-/*   Updated: 2021/11/18 12:18:14 by plavergn         ###   ########.fr       */
+/*   Created: 2021/11/19 11:28:48 by plavergn          #+#    #+#             */
+/*   Updated: 2021/11/19 14:18:32 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 int	ft_putstr(char *str)
 {
-	int		i;
-	int		size;
+	int	i;
 
 	i = 0;
-	size = 0;
+	if (!str)
+	{
+		write (1, "(null)", 6);
+		return (6);
+	}
 	while (str[i])
 	{
-		write (1, &str[i], 1);
+		write(1, &str[i], 1);
 		i++;
-		size++;
 	}
-	return (size);
+	return (i);
 }

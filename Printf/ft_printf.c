@@ -5,71 +5,47 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/16 11:15:03 by plavergn          #+#    #+#             */
-/*   Updated: 2021/11/18 12:48:57 by plavergn         ###   ########.fr       */
+/*   Created: 2021/11/19 11:22:39 by plavergn          #+#    #+#             */
+/*   Updated: 2021/11/19 15:13:26 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printer(va_list	args, int nb)
-{
-	int	printer[10];
-	int	size;
-
-	size = 0;
-	printer[0] = ft_print_c(args);
-	printer[1] = ft_print_s(args);
-//	printer[2] = ft_print_p(args);
-	printer[3] = ft_print_d(args);
-	printer[4] = ft_print_i(args);
-//	printer[5] = ft_print_u(args);
-//	printer[6] = ft_print_x(args);
-//	printer[7] = ft_print_maj_x(args);
-//	printer[8] = ft_print_percent(args);
-	size = printer[nb];
-	return (size);
-}
-
 int	ft_printf(const char *str, ...)
 {
-	va_list		args;
-	int			size;
-	int			i;
-	char		*s;
-	int			nb;
+	int		size;
+	int		result;
+	int		i;
+	va_list	args;
 
-	s = "cspdiuxX%";
 	i = 0;
-	nb = 0;
 	size = 0;
-	va_start (args, str);
+	va_start(args, str);
 	while (str[i])
 	{
 		if (str[i] == '%')
 		{
-			while (s[nb])
-			{
-				if (s[nb] == str[i +1])
-				{
-					size += ft_printer(args, nb);
-					i++;
-				}
-				nb++;
-			}
-			nb = 0;
+			result = ft_printer(args, str[i + 1]);
+			if (result == 0 && str[i + 1] != 's')
+				size += ft_putchar(str[i + 1]);
+			i++;
+			size += result;
 		}
-		putchar(str[i]);
-		size++;
+		else
+			size += ft_putchar(str[i]);
 		i++;
 	}
-	va_end(args);
 	return (size);
 }
 /*
 int	main(void)
 {
-	printf("%u", printf("%s", "bien le bonjour\n"));
-	printf("%u", ft_printf("%s", "bien le bonjour"));
+	int	size;
+
+	size = 0;
+	size += ft_printf("Bien %p evide;emt", 123456);
+	printf("\n%d", size);
+	return (0);
 }
 */
