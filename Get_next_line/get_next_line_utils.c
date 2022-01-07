@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 08:48:46 by plavergn          #+#    #+#             */
-/*   Updated: 2021/12/13 17:08:40 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/01/06 14:35:24 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strlennl(char *src, int nb)
 			nb++;
 		return (nb);
 	}
-	else if (nb == 1)
+	else
 	{
 		nb = 0;
 		while (src[nb] && src[nb] != '\n')
@@ -33,7 +33,7 @@ int	ft_strlennl(char *src, int nb)
 char	*ft_strdup(char *source)
 {
 	char	*dest;
-	size_t	i;
+	int		i;
 
 	i = ft_strlennl(source, 0);
 	dest = malloc(sizeof(char) * (i + 1));

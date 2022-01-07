@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 08:48:41 by plavergn          #+#    #+#             */
-/*   Updated: 2021/12/13 17:04:46 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/01/07 10:34:56 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*get_next_line(int fd)
 
 	i = 0;
 	j = 1;
-	dest = ft_strdup(buff);
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
+	dest = ft_strdup(buff);
 	while (j > 0 && buff[i] != '\n')
 	{
 		i = 0;
@@ -39,23 +39,3 @@ char	*get_next_line(int fd)
 	new_buffer(buff);
 	return (dest);
 }
-/*
-int	main(void)
-{
-	int		fd;
-	char	*str;
-	int		i;
-
-	i = 11;
-	fd = open("test.txt", O_RDONLY);
-	while (i > 0)
-	{
-		str = get_next_line(fd);
-		printf("%s", str);
-		free(str);
-		i--;
-	}
-	close(fd);
-	return (0);
-}
-*/
