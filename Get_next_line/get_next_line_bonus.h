@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 10:47:52 by plavergn          #+#    #+#             */
-/*   Updated: 2022/01/07 10:25:35 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/01/10 12:56:44 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <fcntl.h>
 
 char	*get_next_line(int fd);
 int		ft_strlennl(char *src, int nb);

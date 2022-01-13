@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/16 10:48:28 by plavergn          #+#    #+#             */
-/*   Updated: 2022/01/07 10:04:42 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/01/10 11:50:52 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	*ft_strjoin(char *s1, char *s2)
 		return (NULL);
 	if (!s1)
 		return (ft_strdup(s2));
-	dest = malloc(sizeof(char) * (ft_strlennl(s1, 0) + ft_strlennl(s2, 1) + 1));
+	dest = malloc(sizeof(char) * (ft_strlennl(s1, 0) + ft_strlennl(s2, 1) + 2));
 	if (!dest)
 		return (NULL);
 	while (s1[++i])
