@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/11 14:54:21 by plavergn          #+#    #+#             */
-/*   Updated: 2021/11/11 15:22:28 by plavergn         ###   ########.fr       */
+/*   Created: 2022/01/19 16:46:02 by plavergn          #+#    #+#             */
+/*   Updated: 2022/01/19 16:53:42 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+void	init_pile_a(int argc, char **argv, t_struct *sort)
 {
-	del(lst->content);
-	free(lst);
+	int i;
+
+	i = 1;
+	sort->pile_a = malloc(sizeof(int *) * (argc - 1));
+	while (i < argc)
+	{
+		sort->pile_a = (int)argv[i];
+		i++;
+	}
+	return ;
 }
+
