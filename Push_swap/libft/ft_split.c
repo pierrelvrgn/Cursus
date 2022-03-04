@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 17:42:04 by plavergn          #+#    #+#             */
-/*   Updated: 2021/11/16 12:33:02 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/02/23 11:02:42 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,14 +71,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (result);
 }
-/*
-int	main(void)
-{
-	char	*s;
-	char	c;
-
-	c = ' ';
-	s = "  bien  le bom   jce   ";
-	printf("%s", *ft_split(s, c));
-}
-*/

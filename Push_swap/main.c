@@ -6,18 +6,19 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 16:39:36 by plavergn          #+#    #+#             */
-/*   Updated: 2022/01/19 16:53:54 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/02/24 10:36:44 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "includes/push_swap.h"
 
-int	main (int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	t_struct sort;
+	t_control	*control;
 
-	if (argc == 1)
-		return (0);
-	init_pile_a(argc, argv, &sort);
-	return (0);
+	control = NULL;
+	control = init(control, argc, argv);
+	sort_0_to_100(control);
+	print_list(control);
+	exit(EXIT_SUCCESS);
 }
