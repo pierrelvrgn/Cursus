@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 08:50:44 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/22 09:58:58 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/22 18:43:32 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ typedef struct s_control
 Prototypes
 */
 
-void		exit_error(char *str);
+void		exit_error(void);
 void		ft_doublon(t_control *control);
 int			ft_check_variable(char *str);
 t_control	*ft_new_control(void);
@@ -50,8 +50,6 @@ t_pile		*ft_new_lst(int content);
 void		pre_sort(t_control *control);
 void		sort_pile(t_control *control);
 t_control	*init(t_control *control, int argc, char **argv);
-int			ft_atoi(const char *theString);
-int			check(long long result, short sign);
 void		ft_add_next(t_control *control, t_pile *new);
 void		print_list(t_control *control);
 t_control	*init(t_control *control, int argc, char **argv);

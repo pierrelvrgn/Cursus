@@ -6,19 +6,18 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 15:30:52 by plavergn          #+#    #+#             */
-/*   Updated: 2021/11/12 12:04:58 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/22 18:42:41 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "../push_swap.h"
 
-static int	check(long long result, short sign)
+int	check(long long result, int sign)
 {
-	if (result > 2147483648 || result < -2147483649)
+	if (result > 2147483647 || result < -2147483648)
 	{
-		if (sign == 1)
-			return (-1);
-		return (0);
+		exit_error();
 	}
 	return ((int)result * (int)sign);
 }

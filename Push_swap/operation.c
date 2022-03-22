@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 08:05:22 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/22 17:36:14 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/22 18:10:13 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void	ft_reverse_rotate_a(t_control *control)
 	while (move->next->next)
 		move = move->next;
 	move->next = NULL;
-	tmp->next = control->list_a->next;
+	tmp->next = control->list_a;
 	control->list_a = tmp;
 	ft_putstr_fd("rra\n", 1);
 }

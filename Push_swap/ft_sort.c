@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 08:06:15 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/22 17:22:30 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/22 18:49:15 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ void	ft_algo_500(t_control *control)
 
 void	ft_sort_3(t_control *control, int tab[])
 {
+	if (ft_is_sort(control, ft_len_pile_a(control)))
+		exit(EXIT_SUCCESS);
 	if (tab[0] == 1 && tab[1] == 2 && tab[2] == 0)
 	{
 		ft_reverse_rotate_a(control);
@@ -193,10 +195,11 @@ void	ft_sort_5(t_control *control)
 	int		tab[3];
 	int		i;
 
+	if (ft_is_sort(control, ft_len_pile_a(control)))
+		exit(EXIT_SUCCESS);
 	i = 0;
 	pile_a = control->list_a;
 	ft_push_2(control);
-//	print_list(control);
 	pile_a = control->list_a;
 	while (pile_a && i < 3)
 	{

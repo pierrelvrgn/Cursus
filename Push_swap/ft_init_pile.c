@@ -6,15 +6,15 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 19:54:16 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/22 08:20:08 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/22 18:40:46 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	exit_error(char *str)
+void	exit_error(void)
 {
-	printf("Error : %s\n", str);
+	printf("Error");
 	exit(EXIT_FAILURE);
 }
 
@@ -39,7 +39,7 @@ int	ft_check_variable(char *str)
 			j++;
 		}
 		if (a == 0)
-			exit_error(BAD_CHARACTER);
+			exit_error();
 		i++;
 	}
 	nb = ft_atoi(str);
@@ -58,7 +58,7 @@ void	ft_doublon(t_control *control)
 		while (temp)
 		{
 			if (actuel->nb == temp->nb && temp->pos != actuel->pos)
-				exit_error(DOUBLON);
+				exit_error();
 			temp = temp->next;
 		}
 		temp = control->list_a;
@@ -76,6 +76,8 @@ t_control	*init(t_control *control, int argc, char **argv)
 	control = ft_new_control();
 	while (i < argc)
 	{
+		if (argv[i][0] == '\0')
+			exit_error();
 		str = ft_split(argv[i], ' ');
 		j = 0;
 		while (str[j])
