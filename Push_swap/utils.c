@@ -6,11 +6,11 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 16:46:02 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/02 12:42:41 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/22 15:14:49 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "push_swap.h"
 
 t_control	*ft_new_control(void)
 {
@@ -57,6 +57,7 @@ void	print_list(t_control *control)
 		exit(EXIT_FAILURE);
 	}
 	actuel = control->list_a;
+	printf("Pile A : \n");
 	while (actuel != NULL)
 	{
 		printf("Nb : %d     ||      ", actuel->nb);
@@ -72,4 +73,18 @@ void	print_list(t_control *control)
 		pileb = pileb->next;
 	}
 	printf("NULL\n");
+}
+
+void	free_memory(t_control *control)
+{
+	t_pile		*tmp;
+	t_pile		*clear;
+
+	tmp = control->list_a;
+	while (tmp)
+	{
+		clear = tmp;
+		tmp = tmp->next;
+		free(clear);
+	}
 }

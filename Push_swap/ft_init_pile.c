@@ -6,27 +6,25 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 19:54:16 by plavergn          #+#    #+#             */
-/*   Updated: 2022/02/23 13:24:34 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/22 08:20:08 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "push_swap.h"
 
-void	exit_error(void)
+void	exit_error(char *str)
 {
-	printf("Error\n");
+	printf("Error : %s\n", str);
 	exit(EXIT_FAILURE);
 }
 
 int	ft_check_variable(char *str)
 {
 	int		i;
-	char	*base;
 	int		a;
 	int		j;
 	int		nb;
 
-	base = "0123456789";
 	i = 0;
 	if (str[i] == '-')
 		i++;
@@ -34,14 +32,14 @@ int	ft_check_variable(char *str)
 	{
 		a = 0;
 		j = 0;
-		while (base[j])
+		while (BASE[j])
 		{
-			if (str[i] == base[j])
+			if (str[i] == BASE[j])
 				a = 1;
 			j++;
 		}
 		if (a == 0)
-			exit_error();
+			exit_error(BAD_CHARACTER);
 		i++;
 	}
 	nb = ft_atoi(str);
@@ -60,7 +58,7 @@ void	ft_doublon(t_control *control)
 		while (temp)
 		{
 			if (actuel->nb == temp->nb && temp->pos != actuel->pos)
-				exit_error();
+				exit_error(DOUBLON);
 			temp = temp->next;
 		}
 		temp = control->list_a;
@@ -83,8 +81,10 @@ t_control	*init(t_control *control, int argc, char **argv)
 		while (str[j])
 		{
 			ft_add_next(control, ft_new_lst(ft_check_variable(str[j])));
+			free(str[j]);
 			j++;
 		}
+		free(str);
 		i++;
 	}
 	return (control);

@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 08:50:44 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/01 13:41:10 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/22 09:58:58 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 Includes
 */
 
-# include "../libft/libft.h"
+# include "libft/libft.h"
 # include <stdlib.h>
 # include <stdlib.h>
 # include <stdio.h>
@@ -42,12 +42,12 @@ typedef struct s_control
 Prototypes
 */
 
-void		exit_error(void);
+void		exit_error(char *str);
 void		ft_doublon(t_control *control);
 int			ft_check_variable(char *str);
 t_control	*ft_new_control(void);
 t_pile		*ft_new_lst(int content);
-void		sort_0_to_100(t_control *control);
+void		pre_sort(t_control *control);
 void		sort_pile(t_control *control);
 t_control	*init(t_control *control, int argc, char **argv);
 int			ft_atoi(const char *theString);
@@ -55,6 +55,26 @@ int			check(long long result, short sign);
 void		ft_add_next(t_control *control, t_pile *new);
 void		print_list(t_control *control);
 t_control	*init(t_control *control, int argc, char **argv);
-void		ft_sort(t_control *control, int place);
+void		ft_sort(t_control *control, int place, int index);
+void		free_memory(t_control *control);
+void		ft_check_len(t_control *control);
+void		ft_algo_500(t_control *control);
+int			ft_is_sort(t_control *control, int len);
+int			ft_len_pile_a(t_control *control);
+void		ft_sort_3(t_control *control, int tab[]);
+void		ft_rotate_a(t_control *control);
+void		ft_push_a(t_control *control);
+void		ft_push_b(t_control *control);
+void		ft_sort_5(t_control *control);;
+void		ft_swap_a(t_control *control);
+void		ft_reverse_rotate_a(t_control *control);
+
+/*
+Define
+*/
+
+# define DOUBLON "Doublon"
+# define BAD_CHARACTER "BAD_CHARACTER"
+# define BASE "0123456789"
 
 #endif
