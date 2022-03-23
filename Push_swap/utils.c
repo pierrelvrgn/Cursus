@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 16:46:02 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/22 15:14:49 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:31:02 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,46 +45,4 @@ void	ft_add_next(t_control *control, t_pile *new)
 	while (temp->next)
 		temp = temp->next;
 	temp->next = new;
-}
-
-void	print_list(t_control *control)
-{
-	t_pile	*actuel;
-	t_pile	*pileb;
-
-	if (control == NULL)
-	{
-		exit(EXIT_FAILURE);
-	}
-	actuel = control->list_a;
-	printf("Pile A : \n");
-	while (actuel != NULL)
-	{
-		printf("Nb : %d     ||      ", actuel->nb);
-		printf("Sort : %d\n", actuel->pos);
-		actuel = actuel->next;
-	}
-	pileb = control->list_b;
-	printf("Pile B : \n");
-	while (pileb != NULL)
-	{
-		printf("Nb : %d     ||      ", pileb->nb);
-		printf("Sort : %d\n", pileb->pos);
-		pileb = pileb->next;
-	}
-	printf("NULL\n");
-}
-
-void	free_memory(t_control *control)
-{
-	t_pile		*tmp;
-	t_pile		*clear;
-
-	tmp = control->list_a;
-	while (tmp)
-	{
-		clear = tmp;
-		tmp = tmp->next;
-		free(clear);
-	}
 }

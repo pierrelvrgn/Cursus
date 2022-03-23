@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 08:50:44 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/22 18:43:32 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:29:27 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,17 +44,13 @@ Prototypes
 
 void		exit_error(void);
 void		ft_doublon(t_control *control);
-int			ft_check_variable(char *str);
 t_control	*ft_new_control(void);
 t_pile		*ft_new_lst(int content);
 void		pre_sort(t_control *control);
-void		sort_pile(t_control *control);
 t_control	*init(t_control *control, int argc, char **argv);
 void		ft_add_next(t_control *control, t_pile *new);
 void		print_list(t_control *control);
 t_control	*init(t_control *control, int argc, char **argv);
-void		ft_sort(t_control *control, int place, int index);
-void		free_memory(t_control *control);
 void		ft_check_len(t_control *control);
 void		ft_algo_500(t_control *control);
 int			ft_is_sort(t_control *control, int len);

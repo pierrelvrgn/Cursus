@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 16:39:36 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/22 17:20:17 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:22:36 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,5 @@ int	main(int argc, char **argv)
 	control = init(control, argc, argv);
 	pre_sort(control);
 	ft_check_len(control);
-//	free_memory(control);
 	exit(EXIT_SUCCESS);
 }
-/*
-*/

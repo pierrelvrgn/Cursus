@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 19:54:16 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/22 18:40:46 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:27:43 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	exit_error(void)
 {
-	printf("Error");
+	ft_putstr_fd("Error\n", 2);
 	exit(EXIT_FAILURE);
 }
 
-int	ft_check_variable(char *str)
+static int	ft_check_variable(char *str)
 {
 	int		i;
 	int		a;

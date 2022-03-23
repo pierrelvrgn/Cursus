@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 11:12:11 by plavergn          #+#    #+#             */
-/*   Updated: 2021/11/05 16:42:51 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:31:36 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,3 @@ void	*ft_memchr(const void *memoryBlock, int searchedChar, size_t size)
 	}
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	char	*mb;
-	char	sc;
-	size_t	size;
-
-	mb = "Bonjour je test 123 abcdef";
-	sc = '1';
-	size = 40;
-	printf("FT_MEMCHR :\n%s  ||  ", ft_memchr(mb, sc, size));
-	printf("%s\n\n------------------------------------", memchr(mb, sc, size));
-}
-*/

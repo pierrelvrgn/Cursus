@@ -6,7 +6,7 @@
 #    By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/19 16:31:04 by plavergn          #+#    #+#              #
-#    Updated: 2022/03/22 17:31:21 by plavergn         ###   ########.fr        #
+#    Updated: 2022/03/23 09:33:43 by plavergn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,10 +19,11 @@ SRC =	main.c\
 		operation.c\
 		ft_check_len.c\
 		ft_sort.c\
+		ft_sort_for_five.c\
 
 OBJ = $(SRC:.c=.o)
 INCDIR = push_swap.h
-FLAGS = -Wall -Wextra -Werror -fsanitize=address
+FLAGS = -Wall -Wextra -Werror
 LINKS = libft/libft.a
 
 all: $(NAME)
@@ -40,6 +41,3 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
-
-
-#

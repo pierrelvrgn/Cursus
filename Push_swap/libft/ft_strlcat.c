@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 14:13:11 by plavergn          #+#    #+#             */
-/*   Updated: 2021/11/04 10:34:25 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:31:58 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,21 +38,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	return (i);
 }
-/*
-#include <string.h>
-
-int	main(void)
-{
-	char	*dst;
-	char	*src;
-	size_t	size;
-
-	dst = "bonjour";
-	src = "bienle";
-	size = 7;
-	printf("FT_STRLCAT :\n%zu  ||  ",
-		ft_strlcat(dst, src, size));
-	printf("%zu\n\n------------------------------------",
-		strlcat(dst, src, size));
-}
-*/

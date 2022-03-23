@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 13:38:12 by plavergn          #+#    #+#             */
-/*   Updated: 2021/11/12 11:40:58 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:32:18 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,10 +51,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	result[j] = '\0';
 	return (result);
 }
-/*
-int	main(int argc, char **argv)
-{
-	printf("%s", ft_strtrim(argv[1], argv[2]));
-}
-
-*/

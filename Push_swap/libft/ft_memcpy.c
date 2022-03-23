@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 10:22:38 by plavergn          #+#    #+#             */
-/*   Updated: 2021/11/05 16:37:56 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:31:44 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,3 @@ void	*ft_memcpy( void *destination, const void *source, size_t size )
 	}
 	return (p);
 }
-/*
-int	main(void)
-{
-	char	buff1[0xF00];
-	char	*src;
-
-	src = "nyancat® inside";
-	printf("FT_MEMCPY :\n%s  ||  ", ft_memcpy(buff1, src, sizeof(&src)));
-	printf("%s\n\n---------------------------", memcpy(buff1, src, sizeof(&src)));
-}
-*/

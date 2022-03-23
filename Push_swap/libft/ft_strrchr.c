@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 16:40:58 by plavergn          #+#    #+#             */
-/*   Updated: 2021/11/05 17:25:54 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:32:14 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,3 @@ char	*ft_strrchr(const char *s, int c)
 		return (NULL);
 	return (&str[j]);
 }
-/*
-int	main(void)
-{
-	char	*str;
-	char	c;
-
-	c = 'a';
-	str = "bien le bonjour abcdef ";
-	printf("FT_STRRCHR :\n%s  ||  ", strrchr(str, c));
-	printf("%s\n\n------------------------------------", ft_strrchr(str, c));
-}
-*/

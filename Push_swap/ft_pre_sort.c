@@ -6,13 +6,13 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 20:06:15 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/22 17:20:28 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:29:31 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_sort(t_control *control, int place, int index)
+static void	ft_sort(t_control *control, int place, int index)
 {
 	int		max;
 	t_pile	*actuel;
@@ -40,7 +40,7 @@ void	ft_sort(t_control *control, int place, int index)
 	actuel->pos = place;
 }
 
-void	sort_pile(t_control *control)
+static void	sort_pile(t_control *control)
 {
 	t_pile	*actuel;
 

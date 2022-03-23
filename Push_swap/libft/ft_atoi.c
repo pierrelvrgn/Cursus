@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 15:30:52 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/22 18:42:41 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:31:23 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 int	check(long long result, int sign)
 {
-	if (result > 2147483647 || result < -2147483648)
-	{
+	if (result == 2147483648 && sign == -1)
+		return (-2147483648);
+	else if (result > 2147483647)
 		exit_error();
-	}
 	return ((int)result * (int)sign);
 }
 
@@ -48,13 +48,3 @@ int	ft_atoi(const char *theString)
 	}
 	return (check(result, sign));
 }
-/*
-int	main(void)
-{
-	char	*str;
-
-	str = "  	    -2147483649a9812";
-	printf("FT_ATOI :\n%d  ||  ", ft_atoi(str));
-	printf("%d\n\n------------------------------------", atoi(str));
-}
-*/

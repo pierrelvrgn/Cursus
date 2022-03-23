@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 11:57:37 by plavergn          #+#    #+#             */
-/*   Updated: 2021/11/05 17:11:31 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:32:12 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,3 @@ char	*ft_strnstr(const char	*big, const char *little, size_t len)
 	}
 	return (0);
 }
-/*
-int	main(void)
-{
-	char	*big;
-	char	*little;
-	size_t	len;
-
-	len = 10;
-	big = "abcfgdefghi";
-	little = "fgh";
-	printf("FT_STRNSTR :\n%s  ||  ", strnstr(big, little, len));
-	printf("%s\n\n------------------------------------",
-		ft_strnstr(big, little, len));
-}
-*/

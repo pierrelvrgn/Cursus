@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 12:47:15 by plavergn          #+#    #+#             */
-/*   Updated: 2021/11/05 16:41:32 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 09:31:49 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,22 +36,3 @@ void	*ft_memmove( void *destination, const void *source, size_t size )
 	}
 	return (dst);
 }
-/*
-int	main(int argc, char **argv)
-{
-	char	*dest;
-	char	*test;
-	char	*dst;
-
-	test = "ceci est un test";
-	dest = ft_strdup(argv[1]);
-	//dst = malloc(sizeof(char) * 1);
-	test = ft_strdup(argv[2]);
-	printf("\n%s\n", ft_memmove(dest, test, ft_strlen(test)));
-	printf("%s",
-		memmove(dest, test, ft_strlen(test)));
-	free (dest);
-	free (dst);
-	return (0);
-}
-*/
