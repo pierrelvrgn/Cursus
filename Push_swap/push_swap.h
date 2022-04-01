@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 08:50:44 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/23 09:29:27 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/03/23 10:10:28 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,6 @@ void		ft_reverse_rotate_a(t_control *control);
 Define
 */
 
-# define DOUBLON "Doublon"
-# define BAD_CHARACTER "BAD_CHARACTER"
 # define BASE "0123456789"
 
 #endif
