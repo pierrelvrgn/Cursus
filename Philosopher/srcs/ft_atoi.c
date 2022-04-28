@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   atoi.c                                             :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/26 08:01:41 by plavergn          #+#    #+#             */
-/*   Updated: 2022/03/26 08:01:42 by plavergn         ###   ########.fr       */
+/*   Created: 2022/04/13 13:15:56 by plavergn          #+#    #+#             */
+/*   Updated: 2022/04/13 13:16:12 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "../include/philo.h"
 
 static int	check(long long result, short sign)
 {

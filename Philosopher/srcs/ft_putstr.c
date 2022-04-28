@@ -1,27 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/02 14:38:59 by plavergn          #+#    #+#             */
-/*   Updated: 2022/04/20 14:30:17 by plavergn         ###   ########.fr       */
+/*   Created: 2022/04/11 11:15:13 by plavergn          #+#    #+#             */
+/*   Updated: 2022/04/11 12:44:58 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../include/philo.h"
 
-size_t	ft_strlen(const char *str)
+static void	ft_putchar(int c)
 {
-	size_t	i;
+	write(1, &c, 1);
+}
 
-	i = 0;
-	// if (!str)
-	// 	return (0);
+static void	ft_putnbr(unsigned int n)
+{
+	if (n > 9)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	if (n >= 0 && n <= 9)
+		ft_putchar((n + '0'));
+}
+
+void	ft_putstr(char *str, unsigned int a, unsigned int b, t_philo *philo)
+{
+	int	i;
+
+	ft_putnbr(a);
+	write(1, " ", 1);
+	ft_putnbr(b);
 	while (str[i])
 	{
+		write(1, &str[i], 1);
 		i++;
 	}
-	return (i);
 }

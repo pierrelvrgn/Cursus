@@ -6,7 +6,7 @@
 /*   By: plavergn <plavergn@student.42lyon.fr >     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/20 08:48:46 by plavergn          #+#    #+#             */
-/*   Updated: 2022/01/10 11:48:16 by plavergn         ###   ########.fr       */
+/*   Updated: 2022/02/03 12:40:20 by plavergn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,11 +85,6 @@ void	new_buffer(char *str)
 
 	i = 0;
 	j = ft_strlennl(str, 1);
-	if (str[0] == 0)
-	{
-		str = NULL;
-		return ;
-	}
 	if (str[j] == '\n')
 	{
 		j++;
@@ -106,3 +101,24 @@ void	new_buffer(char *str)
 		i++;
 	}
 }
+/*
+#include <stdio.h>
+#include <fcntl.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main() {
+    int fd;
+    char    *str;
+
+    fd = open("test.txt", O_RDONLY);
+    str = get_next_line(fd);
+    while(str)
+    {
+        printf("%s", str);
+        free(str);
+        str = get_next_line(fd);
+    }
+    return 0;
+}
+*/
