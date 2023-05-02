@@ -1,0 +1,19 @@
+NO  ./assets/config/debug/north.xpm
+SO  ./assets/config/debug/south.xpm
+WE  ./assets/config/debug/west.xpm
+EA  ./assets/config/debug/east.xpm
+
+F 220,100,0
+C 225,30,0
+
+1111111111111
+1000000000001
+1000000000001
+1001010101001
+10000000S0001
+1001010101001
+1000000000001
+1000000000001
+1111111111111
+
+
